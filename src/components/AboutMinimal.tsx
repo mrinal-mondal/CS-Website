@@ -1,3 +1,6 @@
+import { Mail, MapPin, Linkedin, X, Phone } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+
 const AboutMinimal = () => {
   return (
     <section id="about" className="py-16 bg-muted/20">
@@ -39,11 +42,11 @@ const AboutMinimal = () => {
             <strong className="text-accent"> 95% customer retention rate</strong> across 37+ enterprise clients.
           </p>
 
-          <div className="bg-accent/50 p-6 rounded-lg">
+          <div className="bg-accent/50 p-6 rounded-lg mb-12">
             <h3 className="font-serif text-xl mb-4 text-foreground">Educational Background</h3>
             <div className="space-y-2">
               <p className="text-muted-foreground">
-                <strong>MBA</strong> (Ongoing) – DY Patil Vidyapith
+                <strong>MBA</strong> – DY Patil Vidyapith
               </p>
               <p className="text-muted-foreground">
                 <strong>B.Tech. Information Technology</strong> – Jadavpur University
@@ -54,6 +57,77 @@ const AboutMinimal = () => {
               <p className="text-muted-foreground">
                 <strong>Scrum Certified Product Owner</strong> – Scrum.org
               </p>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="border-t border-border pt-12">
+            <h3 className="font-serif text-3xl mb-8 text-foreground">Get in touch</h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  I'm always interested in discussing customer success strategies, enterprise consulting opportunities, 
+                  or collaboration on retention frameworks.
+                </p>
+                
+                <div className="space-y-4">
+                  <a 
+                    href="mailto:mrinal.bappa@gmail.com" 
+                    className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
+                  >
+                    <Mail className="h-5 w-5 group-hover:text-accent" />
+                    <span>mrinal.bappa@gmail.com</span>
+                  </a>
+                  
+                  <a 
+                    href="https://linkedin.com/in/mrinalmondal85" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
+                  >
+                    <Linkedin className="h-5 w-5 group-hover:text-accent" />
+                    <span>linkedin.com/in/mrinalmondal85</span>
+                  </a>
+                  
+                  <a 
+                    href="https://x.com/mrinal_mondal" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
+                  >
+                    <X className="h-5 w-5 group-hover:text-accent" />
+                    <span>x.com/mrinal_mondal</span>
+                  </a>
+                  
+                  <a 
+                    href="https://wa.me/918288803525" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
+                  >
+                    <Phone className="h-5 w-5 group-hover:text-accent" />
+                    <span>+91 8288803525</span>
+                  </a>
+                  
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <MapPin className="h-5 w-5" />
+                    <span>Kolkata, India</span>
+                  </div>
+                </div>
+              </div>
+              
+              <Card className="bg-muted/30 border-border">
+                <CardContent className="p-6">
+                  <h4 className="font-serif text-xl mb-4 text-foreground">Currently</h4>
+                  <div className="space-y-3 text-sm text-muted-foreground">
+                    <p>Leading Customer Success at OpsHub</p>
+                    <p>Managing 200+ enterprise accounts</p>
+                    <p>Pursuing MBA at DY Patil Vidyapith</p>
+                    <p className="text-accent font-medium">Open to consulting opportunities</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

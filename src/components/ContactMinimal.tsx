@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin } from "lucide-react";
+import { Mail, MapPin, Linkedin, X, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ContactMinimal = () => {
@@ -33,6 +33,26 @@ const ContactMinimal = () => {
               >
                 <Linkedin className="h-5 w-5 group-hover:text-accent" />
                 <span>linkedin.com/in/mrinalmondal85</span>
+              </a>
+              
+              <a 
+                href="https://x.com/mrinal_mondal" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
+              >
+                <X className="h-5 w-5 group-hover:text-accent" />
+                <span>x.com/mrinal_mondal</span>
+              </a>
+              
+              <a 
+                href="https://wa.me/918288803525" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
+              >
+                <Phone className="h-5 w-5 group-hover:text-accent" />
+                <span>+91 8288803525</span>
               </a>
               
               <div className="flex items-center gap-3 text-muted-foreground">

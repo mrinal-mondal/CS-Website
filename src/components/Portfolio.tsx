@@ -80,19 +80,19 @@ const Portfolio = () => {
           </p>
         </div>
         
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto relative">
           <Carousel
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-4">
               {projects.map((project, index) => {
                 const IconComponent = project.icon;
                 return (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="pl-4 basis-1/2">
                     <Card className="group hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary overflow-hidden h-full">
                       <CardHeader className="bg-gradient-to-r from-muted/20 to-background">
                         <div className="flex items-start justify-between">
@@ -178,9 +178,16 @@ const Portfolio = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="left-0 w-12 h-12 bg-primary text-primary-foreground hover:bg-primary/90 border-primary shadow-lg" />
+            <CarouselNext className="right-0 w-12 h-12 bg-primary text-primary-foreground hover:bg-primary/90 border-primary shadow-lg" />
           </Carousel>
+          
+          {/* Carousel Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {projects.map((_, index) => (
+              <div key={index} className="w-2 h-2 rounded-full bg-muted-foreground/30 data-[active]:bg-primary transition-colors duration-200"></div>
+            ))}
+          </div>
         </div>
         
         {/* Call to Action */}
